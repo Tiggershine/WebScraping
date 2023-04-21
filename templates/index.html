@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Speiseplan</title>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>
+  </head>
+  <body>
+    <h1 class="mensa-name">Mensa Academica</h1>
+    <ul>
+      {% for menu in menus %}
+      <li>{{ menu.text }}</li>
+      {% endfor %}
+    </ul>
+    <h1 class="pollen-forecast">Pollen Forecast</h1>
+    <div>{{ pollenList }}</div>
+  </body>
+</html>
