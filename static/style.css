@@ -1,3 +1,23 @@
+.wrapper {
+  padding: 0 50px;
+}
+.mensa-wrapper{
+  margin: 100px 0 70px 0;
+}
 .mensa-name {
-  color: #d9534f;
+  color: #60a3bc;
+}
+.mensa-not-open {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #b71540;
+}
+.mensa-open {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+.pollen-forecast {
+  color: #fa983a;
 }

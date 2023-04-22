@@ -2,18 +2,28 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Speiseplan</title>
-
+    <title>AT ONCE</title>
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>
   </head>
+
   <body>
-    <h1 class="mensa-name">Mensa Academica</h1>
-    <ul>
-      {% for menu in menus %}
-      <li>{{ menu.text }}</li>
-      {% endfor %}
-    </ul>
-    <h1 class="pollen-forecast">Pollen Forecast</h1>
-    <div>{{ pollenList }}</div>
+    <div class="wrapper">
+      <div class="mensa-wrapper">
+        <h1 class="mensa-name">Mensa Academica</h1>
+        {% if menus == 'Not open'%}
+          <div class="mensa-not-open">Not open on weekends</div>
+        {% else %}
+          <ul>
+          {% for menu in menus %}
+          <li class="mensa-open">{{ menu.text }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      <div class="pollen-wrapper">
+        <h1 class="pollen-forecast">Pollen Forecast</h1>
+        <div>{{ pollenList }}</div>
+      </div>
+    </div>
   </body>
 </html>
